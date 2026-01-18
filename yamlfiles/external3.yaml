@@ -1,0 +1,12 @@
+# app2-env2-alias.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: app2-env2-alias
+  namespace: default
+spec:
+  type: ExternalName
+  externalName: app2-env2.env-2.svc.cluster.local
+  ports:
+    - port: 5002
+      protocol: TCP

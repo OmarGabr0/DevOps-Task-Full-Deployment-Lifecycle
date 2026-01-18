@@ -1,0 +1,12 @@
+# app1-alias.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: app1-env1-alias
+  namespace: default
+spec:
+  type: ExternalName
+  externalName: app1-env1.env-1.svc.cluster.local
+  ports:
+    - port: 5001
+      protocol: TCP

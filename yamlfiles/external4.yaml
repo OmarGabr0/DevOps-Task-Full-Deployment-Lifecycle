@@ -1,0 +1,12 @@
+# app3-env3-alias.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: app3-env3-alias
+  namespace: default
+spec:
+  type: ExternalName
+  externalName: app3-env3.env-3.svc.cluster.local
+  ports:
+    - port: 5003
+      protocol: TCP

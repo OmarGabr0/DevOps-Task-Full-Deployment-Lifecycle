@@ -1,0 +1,16 @@
+    - path: /app1/log
+      pathType: Prefix
+      backend:
+        service:
+          name: app1-env1
+          namespace: env-1
+          port:
+            number: 5001
+
+--- 
+
+apiVersion: v1
+data:
+  allow-cross-namespace: "true"   # <--- 
+  enable-underscores-in-headers: "true"
+kind: ConfigMap
